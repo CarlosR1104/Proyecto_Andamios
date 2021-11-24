@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+
+    <title>Andamios - {%block title%}{% endblock%}</title>
+    <header>
+
+        <div class="pared"><br></div>
+        <div class="NayrusA">
+            <h1>NayrusAx</h1>
+            <br><br>
+        </div>
+        <br>
+        <div>
+            <ul class="navMenu">
+                    <li><a href="botonM">MENU</a>
+                        <ul>
+                            <li><a  href="{{url_for('formato_Alquiler')}}"> Alquiler </a></li>
+                            <li><a  href="{{url_for('lista_ranking')}}"> Listar rankings de empresas </a></li>
+                            <li><a  href="{{url_for('listar_alquileres')}}">Listar alquileres</a></li>
+                        </ul>
+                    </li>
+            </ul>
+        </div>
+    </header>
+
+
+
+</head>
+<body>
+
+
+
+    
+
+
+    {%block contenido%} {% endblock %}
+</body>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<footer class="footer">
+
+</footer>
+
+</html>

@@ -1,0 +1,27 @@
+{% extends "maestra2.html" %}
+{% block titulo %}
+
+{% endblock %}
+{% block contenido %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Listado de alquileres</title>
+</head>
+<body>
+    <div class="registroA">
+        <div class="formulario">
+            <form action="{{url_for('ingreso_rut')}}" method="POST">
+                <label for="RUT" class="label1">Ingrese el RUT de empresa a la cual le quiere listar los alquileres: </label>
+                <input type="number" name="RUT" class="nombreEmpresa" id="RUT" placeholder="Numero Unico">
+                <button type="submit" class="boton"> Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

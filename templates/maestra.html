@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+
+    <title>Andamios - {%block title%}{% endblock%}</title>
+    <header>
+
+        <div class="pared"><br></div>
+        <div class="NayrusA">
+            <h1 class="titulo">NayrusAx</h1>
+        </div>
+        <div class="sesion">
+            <ul class="inicio">
+                <li><a class="sesion2">Iniciar sesion</a>
+                    <ul>
+                        <li><a href="{{url_for('iniciarSecion_empresa')}}">Empresa</a></li>
+                        <li><a href="{{url_for('iniciarSesion_particular')}}">Particulares</a></li>
+                        <li><a href="{{url_for('iniciar_administrador')}}">Administrador</a></li>
+                    </ul>
+                <li>
+            </ul>
+        </div>
+    </header>
+</head>
+<body>
+
+    {%block contenido%} {% endblock %}
+</body>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<footer class="footer">
+
+</footer>
+
+</html>

@@ -1,0 +1,44 @@
+{% extends "maestra.html" %}
+{% block titulo %}
+
+{% endblock %}
+{% block contenido %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Resgistro_Empreasa</title>
+</head>
+
+<body>
+    <div class="registro">
+        <div class="pared"><br></div>
+        <div class="tituRegistro">
+            <h2>Registro Particular</h2>
+        </div>
+        <div class="formulario">
+            <form action="{{url_for('Registro_cliente')}}" method="POST">
+                <label for="nombreParticular" class="labelNombre">Nombre Particular: </label>
+                <input class="nombreP" type="text" name="nombreParticular" id="nombreParticular" placeholder="">
+                <br><br>
+                <label for="residenciaParticular" class="labelRe">Residencia Particular: </label>
+                <input type="text" name="residenciaParticular" class="cedulaP" id="residenciaParticular" placeholder="">
+                <br><br>
+                <label for="telefonoParticular " class="labelNombre">Telefono Particular: </label>
+                <input type="number" name="telefonoParticular" class="nombreEmpresa" id="telefonoParticular" placeholder="">
+                <br><br>
+                <label for="cedulaParticular" class="labelRe">Cedula Particular: </label>
+                <input type="number" name="cedulaParticular" class="cedulaP"
+                id="cedulaParticular" placeholder="">
+                <button type="submit" class="botonRP">Registrarse</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+{% endblock %}

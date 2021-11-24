@@ -1,0 +1,40 @@
+{% extends "maestra2.html" %}
+{% block titulo %}
+
+{% endblock %}
+{% block contenido %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>Salida</h1>
+    </div>
+    <table>
+        <tbody>
+
+            <tr>
+                <td>
+                    <h2>la Empresa {{ultimo[0]}} con telefono {{ultimo[1]}} solicito un alquiler de {{ultimo[2]}}
+                        Modulos
+                        <br>
+                        por el tiempo de {{ultimo[3]}} horas en la en la ubicacion {{ultimo[4]}} para la
+                        hora {{ultimo[5]}}
+                        <br>
+                        y la solicito de transporte es {{ultimo[6]}}
+                    </h2>
+                </td>
+
+
+            </tr>
+
+        </tbody>
+    </table>
+    {%if %}
+</body>
+</html>
+{%endblock%}
