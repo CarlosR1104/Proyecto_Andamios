@@ -1,0 +1,54 @@
+{% extends "maestra2.html" %}
+{% block titulo %}
+
+{% endblock %}
+{% block contenido %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Registro Empresa</title>
+</head>
+
+<body>
+
+
+    <div class="registroA">
+        <div class="pared"><br></div>
+        <div class="tituRegistro">
+            <h2>llene la siguiente informacion</h2>
+        </div>
+        <div class="formulario">
+            <form action="{{url_for('formato_alquiler')}}" method="POST">
+                <label for="nombreParticular" class="nombreP">Nombre Particular: </label>
+                <input class="nombreP" type="text" name="nombreParticular" id="nombreParticular" placeholder="">
+                <br>
+                <label for="residenciaParticular" class="labelRe">Residencia Particular: </label>
+                <input type="text" name="residenciaParticular" class="cedulaP" id="residenciaParticular" placeholder="">
+                <br>
+                <label for="telefonoParticular" class="labelNombre">Telefono Particular: </label>
+                <input type="number" name="telefonoParticular" class="nombreEmpresa" id="telefonoParticular" placeholder="">
+                <br>
+                <label for="hora" class="label3">Solicitud alquiler: </label>
+                <input type="text" name="hora" class="ubicacion2" id="hora" placeholder=" ">
+                <br>
+                <label for="cantidadModulos" class="label1">Cantidad Modulos: </label>
+                <input type="number" name="cantidadModulos" class="nombreEmpresa" id="cantidadModulos" placeholder="">
+                <br><br>
+                <label for="tiempoAlquiler" class="label1">Tiempo De Alquiler</label>
+                <input type="text" name="tiempoAlquiler" class="nombreEmpresa" id="tiempoAlquiler" placeholder="">
+                <br>
+                <label for="transporte" class="transporte">transporte: </label>
+                <input type="text" name="transporte" class="transporte1" id="transporte" placeholder=" ">
+                <br>
+                <button type="submit" class="botonR">Registrarse</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+{%endblock%}
