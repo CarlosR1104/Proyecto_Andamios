@@ -1,0 +1,39 @@
+{% extends "maestra.html" %}
+{% block titulo %}
+
+{% endblock %}
+{% block contenido %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>sesión_Empresa</title>
+</head>
+
+<div class="registroS">
+    <div class="pared"><br></div>
+
+    <div class="tituRegistro">
+        <h2 class="inicie">Inicie sesión</h2>
+    </div>
+    <div class="formularioS">
+        <form action="{{url_for('login_Empresa')}}" method="POST">
+            <label for="correoAdministrador" class="">Correo: </label>
+            <input type="text" name="correoAdministrador" class="" id="correoAdministrador"
+                placeholder="Ingrese el correo electronico">
+            <br><br>
+            <label for="contraseña" class="">Contraseña</label>
+            <input type="password" name="contraseña" class="" id="contraseña" placeholder="Ingrese la contraseña  ">
+            <br><br>
+            <button type="submit" class="boton">Iniciar Sesiòn</button>
+            <a href="/Registrarse" class="boton">Registrarse</a>
+        </form>
+    </div>
+</div>
+
+</html>
+{% endblock %}
