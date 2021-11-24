@@ -1,0 +1,419 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.registro{
+  margin:6% 0 6% 20%;
+  height:610px;
+  text-align: center;
+  width: 800px;
+  background-color: lightgrey;
+  border-radius: 3%;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 7%;
+  margin-left: 27%;
+}
+
+
+
+.tituRegistro{
+  background-color: rgb(223, 223, 24);
+  border-image-slice: 1;
+  border: 1px solid black;
+  color:black;
+  width: 90%;
+  margin: 1% 0 0 6%;
+  
+}
+
+.formulario{
+  
+  border-image-slice: 1;
+  border: 1px solid black;
+  width: 90%;
+  background-color: white;
+  margin: 3% 0 0 6%;
+  padding: 5% 0 0 0;
+  
+}
+
+.label1{
+  float:left;
+  margin-left: 4%;
+}
+.nombreEmpresa{
+  margin: 0 0 0 0;
+  width: 23%;
+  float:left;
+}
+
+
+.label2{
+  margin: 0 32% 0 0;
+  float:right;
+  margin-top:-43px;
+}
+
+.ubicacion{
+  
+  float:right;
+  margin-top:-43px;
+  margin-right:8% ;
+  
+}
+.botonR{
+  margin: 10% 20% 0 0;
+  float:right;
+  margin-top:-65px;
+  height: 30px;
+  width: 20%;
+}
+.botonR:hover{
+  background-color: rgb(223, 223, 24);
+  cursor: default;
+  cursor:pointer;
+}
+/*inicio de secion Empresa*/
+.registroS{
+  margin:6% 0 6% 20%;
+  height:400px;
+  text-align: center;
+  width: 800px;
+  background-color: lightgrey;
+  border-radius: 3%;
+  font-family: "Open Sans", sans-serif;
+}
+.formularioS{
+  border-image-slice: 1;
+  border: 1px solid black;
+  width: 90%;
+  background-color: white;
+  margin: 3% 0 0 6%;
+  padding: 5% 0 0 0;
+  height: 50%;
+}
+
+/*--------------------------*/
+
+header{
+  height: 340px;
+  background: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(2,0,36,1) 100%);  
+  padding-bottom: 2%;
+}
+header h2{
+  margin: 0 0 0 2%;
+}
+
+
+.NayrusA{ 
+  text-align: center;
+  background:url('/static/images/descarga.png') -10px -10px ;
+  border-radius: 80%;
+  border: 2px solid black;
+  height: 300px;
+  width: 20%;
+  margin: 0 0 0 4%;
+  background-size: cover;
+  margin-left: 35%;
+}
+
+.NayrusA h1{
+  font-family: "Open Sans", sans-serif;
+  font-size: 400%;
+  margin:0 24% 0 0;
+  padding: 20% 0 0 0;
+  margin-left: 10%;
+  border-width: 299px;
+  border-color: black;
+  margin-top: 55%;
+}
+
+
+
+
+.li1 {
+  background-color: white;
+  border: 1px solid black;
+  text-decoration:none;
+  font-size: 150%;
+  height: 40px;
+  float: right; 
+  width: 13%;
+  border-radius: 18%;
+  text-align: center;
+}
+
+
+.li1:hover{
+  border: 2px solid black;
+  background-color: #1293d4;
+  cursor: default;
+  cursor:pointer;
+}
+/*formato Alqiller*/
+
+.registroA{
+  margin:6% 0 6% 20%;
+  height:400px;
+  text-align: center;
+  width: 800px;
+  background-color: lightgrey;
+  border-radius: 3%;
+  font-family: "Open Sans", sans-serif;
+  padding-bottom: 3%;
+  margin-left: 27%;
+}
+
+
+.ubicacion2{
+  float:right;
+  margin-top:-25px;
+  margin-right:8% ;
+
+}
+.label3{
+  margin: 0 32% 0 0;
+  float:right;
+  margin-top:-25px;
+}
+
+.transporte{
+  margin: 0 32% 0 0;
+  float:right;
+  margin-top:-63px;
+
+}
+.transporte1{
+  float:right;
+  margin-top:-63px;
+  margin-right:8% ;
+}
+
+.nav a {
+  font-size: 30px;
+  text-decoration: none;
+  border: 2px solid #ef1722;
+  border-radius: 5px;
+  background-color: white;
+
+  height: 30px;
+  color: #ef1722;
+  display: block;
+}
+
+/*=========================================*/
+
+.nav a:hover {
+  background-color: #00a54f;
+  color: white;
+  border: solid #ef1722;
+}
+
+/*
+.nav a {
+  text-align: center;
+  font-size: 150%;
+  background-color: #ef1722;
+  color: #fff;
+  width: 90px;
+  height: 40px;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+*/
+.nav > li {
+  float: left;
+}
+.nav li ul {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+
+.nav li:hover > ul {
+  display: block;
+}
+
+/*incio sesión*/
+.nav4 {
+  background-color: black;
+}
+.nav4 li a {
+  display: block;
+}
+.nav4 > li {
+  float: left;
+}
+.nav4 li ul {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+.nav4 li:hover > ul {
+  display: block;
+}
+
+.rankings{
+  text-decoration: none;
+  float: right;
+  background-color: white;
+  width: 15%;
+  height: 39px;
+  border-radius: 18%;
+  padding-left: 2%;
+  border: solid 1px black;
+  font-size: 110%;
+  margin-right: 10%;
+}
+
+.alquileres{
+  text-decoration: none;
+  float: right;
+  background-color: white;
+  width: 15%;
+  height: 39px;
+  border-radius: 18%;
+  padding-left: 2%;
+  border: solid 1px black;
+  font-size: 110%;
+  text-align: center;
+  margin-right: 50%;
+}
+
+.listaR{
+  width: 15%;
+}
+
+td h1{
+  vertical-align: top;
+  width: 15%;
+  text-align: left;
+}
+
+ul, ol{
+  list-style: none;
+}
+
+.navMenu li a{
+  background-color: white ;
+  text-decoration: none;
+  color: #1293d4;
+  padding-top: 15px;
+  padding-right: 15px;
+  display: block; 
+}
+
+.navMenu li a:hover{
+  background-color: black;
+}
+
+.navMenu > li{
+  float: left;
+}
+
+.navMenu li ul{
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+
+.navMenu li:hover > ul{
+  display: block;
+}
+
+.navMenu{
+  margin-left: 75%;
+  margin-top: -1%;
+}
+
+h2{
+  background-color: #1293d4;
+  color: white;
+}
+
+.sesion{
+  display: flex;
+  height: 120px;
+  background-color: #00d4ff;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 56px;
+  padding-top: 02px;
+  border: solid 2px #0099c2;
+}
+
+.inicio li a{
+  background-color: white ;
+  text-decoration: none;
+  color: #1293d4;
+  padding-top: 15px;
+  padding-right: 15px;
+  display: block; 
+}
+
+.inicio li a:hover{
+  background-color: black;
+}
+
+.inicio > li{
+  float: left;
+}
+
+.inicio li ul{
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+
+.inicio li:hover > ul{
+  display: block;
+}
+
+.inicio{
+  text-align: center;
+  width: 15%;
+  padding: 15px;
+}
+
+.sesion2{
+  padding: 15px;
+  padding-right: 10px;
+}
+
+.labelNombre{
+  float: left;
+}
+
+.nombreP{
+  margin-right: 55%;
+}
+
+.labelRe{
+  float: right;
+  margin-top: -6%;
+  margin-right: 30%;
+}
+
+.cedulaP{
+  float: right;
+  margin-top: -6%;
+  margin-right: 5%;
+}
+
+.botonRP{
+  margin-left: 55%;
+  width: 15%;
+  height: 30px;
+}
+
+.botonRP:hover{
+  background-color: #1293d4;
+  color: white;
+  cursor: default;
+  cursor:pointer;
+}
