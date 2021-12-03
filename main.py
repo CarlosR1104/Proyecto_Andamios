@@ -11,12 +11,12 @@ from datetime import datetime
 
 from flask import Flask
 from flask import Flask, render_template, request,redirect
-from controlador.controlador_empresa import Registrar_Empresa,inicio_Secion_Empresa,registrar_Alquiler,ranking, salidaAlquiler
-from controlador import controlador_empresa
-from controlador.controlador_particular import Registrar_Particular 
+from controladores.controlador_empresa import Registrar_Empresa,inicio_Secion_Empresa,registrar_Alquiler,ranking, salidaAlquiler
+from controladores import controlador_empresa
+from controladores.controlador_particular import Registrar_Particular 
 
-from controlador.controlador_administrador import iniciar_sesion_Administrador
-from controlador import controlador_administrador
+from controladores.controlador_administrador import iniciar_sesion_Administrador
+from controladores import controlador_administrador
 
 app=Flask(__name__)
 
