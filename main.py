@@ -1,25 +1,18 @@
 from os import close
 import os
 import re
-
-
-
 from flask.helpers import url_for
 from flask.templating import render_template_string
 from datetime import datetime
-
-
 from flask import Flask
 from flask import Flask, render_template, request,redirect
 from controladores.controlador_empresa import Registrar_Empresa,inicio_Secion_Empresa,registrar_Alquiler,ranking, salidaAlquiler
 from controladores import controlador_empresa
 from controladores.controlador_particular import Registrar_Particular 
-
 from controladores.controlador_administrador import iniciar_sesion_Administrador
 from controladores import controlador_administrador
 
 app=Flask(__name__)
-
 @app.route("/")
 def index():
         return render_template('maestra.html')
@@ -27,8 +20,6 @@ def index():
 @app.route("/Dos")
 def indexDos():
         return render_template('maestra2.html')
-
-
 
 @app.route("/Registrarse")
 def Registrarse():
@@ -62,7 +53,6 @@ def Registro_cliente():
         Registrar_Empresa(rut,nombreEmpresa,ubicacion,telefonoEmpresa,añosDeServicio,nombreAdministrador,telefonoAdministrador,cedulaAdministrador,correoAdministrador,contraseñaAdministrador)
         return redirect("/")
 
-
 @app.route("/iniciarSecion_empresa")
 def iniciarSecion_empresa():
         return render_template('iniciar_secionEmpresa.html')
@@ -70,7 +60,6 @@ def iniciarSecion_empresa():
 @app.route("/iniciarSesion_particular")
 def iniciarSesion_particular():
         return render_template('iniciar_secion_Particular.html')
-
 
 @app.route("/login_Empresa", methods=["POST"])
 def login_Empresa():
@@ -86,9 +75,7 @@ def login_Empresa():
         except Exception as error:
                         return redirect ("login_Empresa")
 
-
 #alquiler ===================
-
 @app.route("/formato_Alquiler")
 def formato_Alquiler():
         resultado=2+2
@@ -108,7 +95,6 @@ def formato_alquiler():
         registrar_Alquiler(nombreEmpresa,ubicacion,tiempoAlquiler,telefonoEmpresa,cantidadModulos,transporte,hora,RUT)
         return redirect("Dos")
 
-
 @app.route("/lista_ranking")
 def lista_ranking():
         rankings=ranking()
@@ -120,8 +106,6 @@ def lista_ranking():
                         
                 else:
                         frecuencias[rankin] =1       
-        
-       
         return render_template("lista_alquiler.html",rankings=rankings,frecuencias=frecuencias)
 
 #Listar alquileres 
@@ -141,39 +125,31 @@ def listar_alquileres():
         except Exception as error:
                         return redirect ("login_Empresa")
 
-
 @app.route("/salida_alquiler")
 def salida_alquier():
         salida=salidaAlquiler()
         ultimo=salida[len(salida)-1]
         return render_template("salidaAlquiler.html",ultimo=ultimo)
 
-
-
 #Iniciar secion administrador
-
-
 @app.route("/iniciar_administrador")
 def iniciar_administrador():
-    return render_template("iniciar_sesion_admin.html")
-
+        return render_template("iniciar_sesion_admin.html")
 
 @app.route("/iniciar_sesion_admin", methods=["POST"])
 def iniciar_sesion_admin():
-    email = request.form["correo"]
-    password = request.form["contraseñaAdministrador"]
-    administrador = controlador_administrador.iniciar_sesion_Administrador(email)
-    try:
-        print(password)
-        print(administrador[1])
-        if password == administrador[1]:
-            return redirect ("Dos")
-        else:
-            return redirect ("iniciar_administrador")
-    except Exception as error:
-        return redirect ("iniciar_administrador")
-
-
+        email = request.form["correo"]
+        password = request.form["contraseñaAdministrador"]
+        administrador = controlador_administrador.iniciar_sesion_Administrador(email)
+        try:
+                print(password)
+                print(administrador[1])
+                if password == administrador[1]:
+                        return redirect ("Dos")
+                else:
+                        return redirect ("iniciar_administrador")
+        except Exception as error:
+                return redirect ("iniciar_administrador")
 
 if __name__ == "__main__":
-    app.run(port=7000, debug=True)
+        app.run(port=7000, debug=True)
